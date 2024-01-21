@@ -1,0 +1,17 @@
+import smtplib
+    
+def sendmail(username,password,receiver,message):
+        server = smtplib.SMTP("smtp.gmail.com",587)
+        server.starttls()
+        server.login(username,password)
+        subject = "test email"
+        body = message
+        email_message = f"subject:{subject}\n\n{body}"
+        server.sendmail(username,receiver,message)
+        server.close()
+        
+username = input("Enter the gmail ")
+password = input("Enter the password of your gmail ")
+receiver = input("Enter the gamil of receiver ")
+message = input("message ")
+sendmail(username,password,receiver,message)
