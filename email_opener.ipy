@@ -1,0 +1,6 @@
+import webbrowser
+def mail_opener():
+    url = "https://mail.google.com/mail/u/0/#inbox"
+    webbrowser.open(url)
+if __name__ == "__main__":
+    mail_opener()
